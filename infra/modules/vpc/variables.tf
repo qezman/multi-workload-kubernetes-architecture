@@ -11,12 +11,11 @@ variable "cidr" {
 variable "azs" {
   description = "AZs to deploy the VPC"
   type        = list(string)
-  default     = ["us-east-1a", "us-east-1b"]
 }
 
 variable "private_subnets" {
-  type    = list(string)
-  default = ["10.0.1.0/24", "10.0.2.0/24"]
+  type        = list(string)
+  description = "The CIDR blocks for the private subnets"
 }
 
 variable "public_subnets" {

@@ -1,9 +1,12 @@
-variable "azs" {
-  description = "AZs to deploy the VPC"
-  type        = list(string)
+variable "cluster_name" {
+  type = string
 }
 
 variable "private_subnets" {
   type        = list(string)
   description = "The CIDR blocks for the private subnets"
+}
+
+variable "vpc_id" {
+  type = string
 }
